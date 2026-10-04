@@ -35,9 +35,15 @@ data/processed/*
 *.csv
 !data/sample_data/*.csv
 
-# Node / Frontend
+# Node / Frontend / Build
+node_modules/
 frontend/node_modules/
+dist/
 frontend/dist/
 frontend/.env.local
+.env
+.env.*.local
+.netlify/
+.vercel/
 .DS_Store
 *.log

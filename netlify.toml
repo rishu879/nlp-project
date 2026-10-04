@@ -1,0 +1,33 @@
+# Netlify Configuration for IMD Heavy Rainfall Early Warning System
+# Repository Root Configuration (Monorepo)
+
+[build]
+  # Guarantees frontend dependencies are installed and Vite compiles to production
+  command = "npm --prefix frontend install && npm --prefix frontend run build"
+  publish = "frontend/dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--include=dev"
+  SECRETS_SCAN_ENABLED = "false"
+
+# SPA Fallback: Direct all unknown routes to /index.html with HTTP 200
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Cache static assets aggressively
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Security Headers for production
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

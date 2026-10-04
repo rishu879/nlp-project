@@ -2,10 +2,19 @@
   "name": "imd-early-warning-root",
   "version": "1.0.0",
   "private": true,
+  "workspaces": [
+    "frontend"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
   "scripts": {
     "start": "npm --prefix frontend run dev -- --host 0.0.0.0 --port 3000",
     "dev": "npm --prefix frontend run dev -- --host 0.0.0.0 --port 3000",
-    "build": "npm --prefix frontend run build",
-    "preview": "npm --prefix frontend run preview -- --host 0.0.0.0 --port 3000"
+    "prebuild": "npm --prefix frontend install",
+    "build": "npm --prefix frontend install && npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview -- --host 0.0.0.0 --port 3000",
+    "install:frontend": "npm --prefix frontend install"
   }
 }
