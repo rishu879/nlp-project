@@ -49,3 +49,4 @@ nlp project/
 - [x] **Phase 8: High-Ground Designated Relief Shelters & Evacuation Layer:** Interactive GIS layer displaying safe havens mapped above 100-year flood levels with capacity, occupancy, medical triage, and power backup.
 - [x] **Phase 9: Dual Persona Views:** Seamless toggle between **Official View (DDMA / IMD Command Center)** and **Citizen View (Public / Vernacular Guidance, Helplines & Ground Reporting)**.
 - [x] **Phase 10: Pitch & Presentation Strategy:** Step-by-step judge walkthrough script highlighting Ganges-Brahmaputra-Meghna cross-border basin scalability and UN "Early Warnings for All" (EW4All) 2027 alignment.
+URL:-https://aquanerve-ai.netlify.app/
